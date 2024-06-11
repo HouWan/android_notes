@@ -96,6 +96,11 @@
 | android:textScaleX | 设置字与字的水平间隔 |
 | android:textScaleY | 设置字与字的垂直间隔 |
 
+获取`EditText`输入的内容：
+```java
+editText.getText().toString().trim();
+```
+
 设置`EditText`的焦点：
 ```java
 edit.requestFocus();  // 请求获取焦点

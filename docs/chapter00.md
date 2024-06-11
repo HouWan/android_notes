@@ -7,7 +7,9 @@
 
 `Android` 是一种基于 `Linux` 的开放源代码软件栈，为各类设备和机型而创建。下图所示为 `Android` 平台的主要组件。
 
-![Android 软件堆栈](image/0006.png)
+<p align="center">
+  <img src="./image/0006.png" width="500" alt="Android 软件堆栈">
+</p>
 
 从底层到上面的通用解释：
 
@@ -77,14 +79,33 @@ Java-SDK的下载网址：
 - https://gradle.org/
 
 👇🏻将项目文件的字符编码设置为`UTF-8`：
-![UTF-8](image/0008.png)
+
+<p align="center">
+  <img src="./image/0008.png" width="500" alt="UTF-8">
+</p>
+
 
 👇🏻可以设置项目文件的头部注释：
-![comment](image/0009.png)
+
+<p align="center">
+  <img src="./image/0009.png" width="500" alt="comment">
+</p>
+
+`Android Studio`的外观字体设置：`Settings` --> `Appearance & Behavior` --> `Appearance`
+
+| 技巧 | 解释 | 备注 |
+| --- | --- | --- |
+| option + enter 快捷键 | 鼠标放某方法之后，可以快速生成返回值变量 | |
+
+
+
 
 ## 5.Android SDK
+
 在下载[Android Studio](https://developer.android.google.cn/studio)网站页面，往下翻，即可看到`Android Studio`下载链接和`Android SDK`的下载链接。
 
 > `Android Studio`中包含命令行工具，也就是`Android SDK`。建议直接下载`Android Studio`，在`Android Studio`的`SDK Manager`里面下载想要的`Android SDK`版本和`SDK Tools`
 
-![Android Studio](image/0007.png)
+<p align="center">
+  <img src="./image/0007.png" width="500" alt="Android Studio">
+</p>

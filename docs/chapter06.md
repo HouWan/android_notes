@@ -110,7 +110,7 @@ MVC模式：
 ![Adapter](./image/0029.png)
 
 `adapterView`的继承关系(部分)：
-![adapterView](./image/0030.png)
+![adapterView](./image/0030.webp)
 
 ## 3.ListView
 

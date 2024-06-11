@@ -246,8 +246,29 @@ android:orientation="vertical"  // 垂直
 
 注意：`android:layout_columnSpan="4"`和`android:layout_gravity="fill"`同时使用代表，横跨4列，并且占据这4列，如果不加`android:layout_gravity="fill"`则只会占据对应的列数，但是不会填充。
 
+> `GridLayout`想要均分子View，可以让子View添加`android:layout_columnWeight="1"`属性，这个示例是水平均分3个按钮：
 
+```xml
+<GridLayout
+    android:paddingHorizontal="10dp"
+    android:columnCount="5"  <!-- 这里是5列是因为有2个View充当了按钮的间距 -->
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    <Button android:layout_columnWeight="1"  <!-- 就是这个属性 -->
+        android:layout_height="50dp" />
+
+    <View android:layout_width="2dp" android:layout_height="match_parent" />
+
+    <Button android:layout_columnWeight="1"
+        android:layout_height="50dp" />
+
+    <View android:layout_width="2dp" android:layout_height="match_parent" />
+
+    <Button android:layout_columnWeight="1"
+        android:layout_height="50dp" />
+</GridLayout>
+```
 
 
 
