@@ -22,6 +22,11 @@
 
 * Kotlin
     * [Kotlin基础](./kotlin/k0001.md)
+    * [Kotlin类和对象](./kotlin/k0002.md)
+    * [Kotlin高级特性](./kotlin/k0003.md)
+    * [Kotlin泛型和异常](./kotlin/k0004.md)
+    * [Kotlin集合类](./kotlin/k0005.md)
+    * [Kotlin特殊类型](./kotlin/k0006.md)
 
 * 其他
     * [技巧](skill.md)
