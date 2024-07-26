@@ -1,3 +1,6 @@
+> 当前文件是`chapter07.md`
+
+
 ## 1.ExpandableListView
 `ExpandableListView`是可折叠列表，类似QQ分组通讯录，用到再补全资料。
 

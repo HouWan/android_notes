@@ -1,3 +1,5 @@
+> 当前文件是`chapter12.md`
+
 ## 1.Fragment介绍
 
 `Fragment`可以把他看成一个小型的`Activity`，又称`Activity`片段，`Fragment`并不能单独使用，他需要嵌套在`Activity`中使用，尽管他拥有自己的生命周期，但是还是会受到宿主`Activity`的生命周期的影响，比如`Activity`被destory销毁了，他也会跟着销毁！

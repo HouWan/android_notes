@@ -1,3 +1,4 @@
+> 当前文件是`skill.md`
 
 ## 1.如何查看依赖最新版本
 
@@ -5,7 +6,7 @@
 
 托管到一个[`Maven`仓库](https://central.sonatype.com/)的依赖库，都可以使用如下方法查看。
 
-打开`Maven`第三方仓库主页：https://mvnrepository.com，进行搜索即可。
+打开`Maven`第三方仓库主页： https://mvnrepository.com  进行搜索即可。
 
 (`Maven`可以简单理解为他就是一个git仓库，只要是`Gradle`使用的库一般都放到该仓库的)
 
@@ -65,6 +66,33 @@ exit  # 退出adb的shell模式
     android:usesCleartextTraffic="true" />
 ```
 
+## 3.开发镜像
+
+### 3.1 Gradle镜像
+在项目目录的`gradle` -> `wrapper` -> `gradle-wrapper.properties`中，修改`gradle`的地址即可：
+```g
+# 例如替换为腾讯源：
+
+# 这个是默认的 gradle.org 网址
+# distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+
+# 下面这个是腾讯源
+distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.0-bin.zip
+```
+
+### 3.2 Android SDK镜像
+在`Android Studio`设置中：`Settings` --> `Appearance & Behavior` --> `Systenm Settings` --> `HTTP Proxy`页面里面：
+
+可以将代理地址改为腾讯源或者阿里源，例如：
+```
+# 腾讯
+https://mirrors.cloud.tencent.com/AndroidSDK/
+
+# 阿里云
+https://mirrors.aliyun.com/android.googlesource.com/
+```
+
+![mirrors](./image/0048.webp)
 
 
 

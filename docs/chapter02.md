@@ -1,3 +1,5 @@
+> 当前文件是`chapter02.md`
+
 ## 1.Android UI
 
 Android UI 都是由**布局Layout**和**控件View**组成的。

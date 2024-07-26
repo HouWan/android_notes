@@ -1,3 +1,5 @@
+> 当前文件是`pack.md`
+
 ## 1.签名jks文件
 
 ### 1.1 Android Studio生成

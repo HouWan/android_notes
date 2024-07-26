@@ -1,3 +1,5 @@
+> 当前文件是`chapter04.md`
+
 ## 1.TextView
 
 `TextView`用于显示文本的基础View，字体的尺寸单位为`sp`，常用属性如下：

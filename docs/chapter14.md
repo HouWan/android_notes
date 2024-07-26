@@ -1,3 +1,5 @@
+> 当前文件是`chapter14.md`
+
 ## 1.RecyclerView
 
 ### 1.1 基本使用流程
@@ -69,6 +71,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return mData.size();
     }
 }
+```
+
+### 1.2 IED中预览效果
+如下所示，代码中增加`tools:listitem`和`tools:itemCount`两个属性，可以在IDE中实时看到列表的效果，而且只会在IDE中生效：
+```xml
+<!-- tools:listitem=@"layout/xxx" 在IED中预览cell效果 -->
+<!-- tools:itemCount=2 在IED中预览cell的个数 -->
+<androidx.recyclerview.widget.RecyclerView
+    tools:listitem="@layout/item_discovery_content"
+    tools:itemCount="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 ```
 
 

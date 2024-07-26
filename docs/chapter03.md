@@ -1,3 +1,6 @@
+> 当前文件是`chapter03.md`
+
+
 ## 1.LinearLayout
 
 `LinearLayout` 是一个线性布局，让内部子视图水平或垂直保持对齐，默认是水平。改变方向的属性是`android:orientation="vertical"`

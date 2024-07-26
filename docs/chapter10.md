@@ -1,3 +1,4 @@
+> 当前文件是`chapter10.md`
 
 `BroadcastReceiver`是App之间的广播通信机制，Android系统自己在很多时候都会发送广播，比如电量低或者充足，插入耳机等。`BroadcastReceiver`有两种广播类型：
 

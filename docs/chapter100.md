@@ -1,3 +1,5 @@
+> 当前文件是`chapter100.md`
+
 ## 1.Android程序启动图标
 
 ### 1.1 图标icons：
@@ -9,10 +11,10 @@
 
 ### 1.2 单位和度量 Units and measurements
 
-- `dpi` =屏幕宽度（或高度）像素 / 屏幕宽度（或高度）英寸
-- `dp` =(宽度像素 x 160)/ `dpi`
+- `dpi` = 屏幕宽度（或高度）像素 / 屏幕宽度（或高度）英寸
+- `dp` = (宽度像素 x 160) / `dpi`
 
-| 名称 | 分辨率px | dpi | 像素比 | 示例dp | 对应像素 |
+| 名称 | 分辨率px | dpi | 像素比(density) | 示例dp | 对应像素 |
 | --- | --- | --- | --- | --- | --- |
 | xxxhdpi | 2160 x 3840 | 640 | 4.0 | 48dp | 192px |
 | xxhdpi | 1080 x 1920 | 480 | 3.0 | 48dp | 144px |
@@ -45,10 +47,10 @@ Android的样式一般定义在`res/values/styles.xml`文件中 *（新版本是
 现在我想继承`Widget.AppCompat.Button`样式，改变背景和文字颜色，那么，代码如下：
 ```xml
 <!-- res/values/styles.xml -->
-<resources> 
-    <style name="ButtonNormal" parent="Widget.AppCompat.Button" > 
-       <item name="android:background">@drawable/bg_btn_selector</item> 
-       <item name="android:textColor">@color/text_btn_selector</item> 
+<resources>
+    <style name="ButtonNormal" parent="Widget.AppCompat.Button" >
+       <item name="android:background">@drawable/bg_btn_selector</item>
+       <item name="android:textColor">@color/text_btn_selector</item>
     </style>
 </resources>
 ```
@@ -67,12 +69,12 @@ Android的样式一般定义在`res/values/styles.xml`文件中 *（新版本是
 有些按钮，我只想改变文字颜色，但背景想让它透明，这时就可以用`点前缀`的方式继承以上的样式，代码如下：
 ```xml
 <!-- res/values/styles.xml -->
-<resources> 
-    <style name="ButtonNormal" parent="Widget.AppCompat.Button"> 
-              <item name="android:background">@drawable/bg_btn_selector</item> 
-              <item name="android:textColor">@color/text_btn_selector</item> 
-     </style> 
-     <style name="ButtonNormal.Transparent"> 
+<resources>
+    <style name="ButtonNormal" parent="Widget.AppCompat.Button">
+              <item name="android:background">@drawable/bg_btn_selector</item>
+              <item name="android:textColor">@color/text_btn_selector</item>
+     </style>
+     <style name="ButtonNormal.Transparent">
                 <item name="android:background">@drawable/bg_btn_transparent</item>
                 <item name="android:textColor">@color/text_btn_selector</item>
      </style>
@@ -82,7 +84,7 @@ Android的样式一般定义在`res/values/styles.xml`文件中 *（新版本是
 引用的时候只要在相应的`Button`里添加`style`就可以了，代码如下：
 
 ```xml
-<Button 
+<Button
     style="@style/ButtonNormal.Transparent" />
 ```
 
@@ -112,8 +114,8 @@ Android系统提供了多套主题，查看Android的`frameworks/base/core/res/r
     - 2.android:Theme.Holo.Black Holo黑主题
     - 3.android:T`heme.Holo.Light Holo白主题
 - API 14:
-    - 1.Theme.DeviceDefault 设备默认根主题 
-    - 2.Theme.DeviceDefault.Black 设备默认黑主题 
+    - 1.Theme.DeviceDefault 设备默认根主题
+    - 2.Theme.DeviceDefault.Black 设备默认黑主题
     - 3.Theme.DeviceDefault.Light 设备默认白主题
 - API 21: (也就是Android Material Design主题)
     - 1.Theme.Material Material根主题
@@ -126,17 +128,17 @@ Android系统提供了多套主题，查看Android的`frameworks/base/core/res/r
 
 自定义主题也很简单，只要继承某一父主题，然后在`<activity>`标签或`<application>`中引用就可以了。主题的定义示例如下：
 ```xml
-<resources> 
-      <style name="AppTheme" parent="Theme.AppCompat"> 
-          <item name="windowActionBar">false</item> 
-          <item name="windowNoTitle">true</item> 
-          <item name="windowAnimationStyle">@style/WindowAnimation</item> 
-      </style> 
-      <!-- Standard animations for a full-screen window or activity. --> 
+<resources>
+      <style name="AppTheme" parent="Theme.AppCompat">
+          <item name="windowActionBar">false</item>
+          <item name="windowNoTitle">true</item>
+          <item name="windowAnimationStyle">@style/WindowAnimation</item>
+      </style>
+      <!-- Standard animations for a full-screen window or activity. -->
       <style name="WindowAnimation" parent="@android:style/Animation.Activity">
-          <item name="activityOpenEnterAnimation">@anim/activity_open_enter</item> 
-          <item name="activityOpenExitAnimation">@anim/activity_open_exit</item> 
-          <item name="activityCloseEnterAnimation">@anim/activity_close_enter</item> 
+          <item name="activityOpenEnterAnimation">@anim/activity_open_enter</item>
+          <item name="activityOpenExitAnimation">@anim/activity_open_exit</item>
+          <item name="activityCloseEnterAnimation">@anim/activity_close_enter</item>
           <item name="activityCloseExitAnimation">@anim/activity_close_exit</item>
       </style>
 </resources>
@@ -146,24 +148,24 @@ Android系统提供了多套主题，查看Android的`frameworks/base/core/res/r
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <set
-      xmlns:android="http://schemas.android.com/apk/res/android"  
-      android:shareInterpolator="false" 
-      android:zAdjustment="top"> 
-      <alpha 
-              android:fromAlpha="0.0" 
-              android:toAlpha="1.0"    
-              android:interpolator="@interpolator/decelerate_quart" 
-              android:fillEnabled="true" 
-              android:fillBefore="false" 
-              android:fillAfter="true" 
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:shareInterpolator="false"
+      android:zAdjustment="top">
+      <alpha
+              android:fromAlpha="0.0"
+              android:toAlpha="1.0"
+              android:interpolator="@interpolator/decelerate_quart"
+              android:fillEnabled="true"
+              android:fillBefore="false"
+              android:fillAfter="true"
               android:duration="200" />
-       <translate 
-              android:fromYDelta="8%" 
-              android:toYDelta="0" 
-              android:fillEnabled="true" 
-              android:fillBefore="true" 
-              android:fillAfter="true"   
-              android:interpolator="@interpolator/decelerate_quint" 
+       <translate
+              android:fromYDelta="8%"
+              android:toYDelta="0"
+              android:fillEnabled="true"
+              android:fillBefore="true"
+              android:fillAfter="true"
+              android:interpolator="@interpolator/decelerate_quint"
               android:duration="350" />
 </set>
 ```
@@ -171,8 +173,8 @@ Android系统提供了多套主题，查看Android的`frameworks/base/core/res/r
 若要使用到整个`Application`，则在`AndroidManifest.xml`的`<application>`标签设置`android:theme`属性，示例代码如下：
 
 ```xml
-<application 
-      android:theme="@style/AppTheme"> 
+<application
+      android:theme="@style/AppTheme">
 </application>
 ```
 
