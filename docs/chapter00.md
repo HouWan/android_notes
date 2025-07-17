@@ -64,8 +64,15 @@ Android开发四大组件：
 ## 3.Java SDK
 安装`Android Studio`之前，需要先在电脑安装和配置Java环境。
 
-Java-SDK的下载网址：
+Oracle-Java-SDK的下载网址：
 - https://www.oracle.com/java/technologies/downloads/
+
+微软的OpenJDK-Java-SDK的下载网址：
+- https://learn.microsoft.com/en-us/java/openjdk
+
+Azul-OpenJDK-Java-SDK的下载网址：
+- https://www.azul.com/downloads/?package=jdk
+
 
 > 配置Java环境变量自行搜索即可
 
